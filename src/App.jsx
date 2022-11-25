@@ -9,7 +9,9 @@ import {
   RiAlignCenter,
   RiCloseLine,
   RiNotification3Line,
-  RiSearchLine} from "react-icons/ri";
+  RiSearchLine,
+  RiArrowLeftCircleLine,
+  RiArrowRightCircleLine} from "react-icons/ri";
 import { ImFeed } from "react-icons/im";
 import { FaCircle } from "react-icons/fa";
 
@@ -120,9 +122,9 @@ function App() {
       </header>
       {/*Content*/}
       <main className="lg:pl-[340px] p-8 pt-36">
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-2">
-          <div className="col-span-5 relative">
-            <img src="https://adrenaline.com.br/uploads/chamadas/imagem_2022-09-14_163412548.png" className="w-full h-[500px] object-cover rounded-tl-xl rounded-bl-xl" />
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
+          <div className="md:col-span-5 relative">
+            <img src="https://adrenaline.com.br/uploads/chamadas/imagem_2022-09-14_163412548.png" className="w-full h-[500px] object-cover lg:rounded-tl-xl lg:rounded-bl-xl" />
             <h1 className="absolute top-4 left-4 text-3xl font-bold text-white">Call of Dutty</h1>
             <div className="absolute left-0 bottom-0 p-8 max-w-2xl">
               <p className="text-white text-xl">
@@ -136,45 +138,98 @@ function App() {
             </div>
           </div>
           {/*Games*/}
-          <div className="col-span-1 w-full bg-[#232323] rounded-tr-xl rounded-br-xl">
+          <div className="col-span-1 w-full bg-[#232323] lg:rounded-tr-xl lg:rounded-br-xl">
             <ul className="p-4 flex flex-col gap-4 h-[500px] overflow-scroll">
               <li>
                 <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
                   <img src="https://static-cdn.jtvnw.net/ttv-boxart/33214-285x380.jpg" className="w-20 h-30 object-cover"
                   /> {" "}
-                  Fornite
+                  <span className="md:hidden lg:block">Fornite</span>
+                  
                 </a>
               </li>
               <li>
                 <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
                   <img src="https://static-cdn.jtvnw.net/ttv-boxart/30921-272x380.jpg" className="w-20 h-30 object-cover"
                   /> {" "}
-                  Rocket League
+                  <span className="md:hidden lg:block">Rocket League</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
                   <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" className="w-20 h-30 object-cover"
                   /> {" "}
-                  Minecraft
+                  <span className="md:hidden lg:block">Minecraft</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
                   <img src="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/1280/V.jpg" className="w-20 h-30 object-cover"
                   /> {" "}
-                  Grand Theft Auto V
+                  <span className="md:hidden lg:block">Grand Theft Auto V</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
                   <img src="https://media.vandal.net/m/75962/genshin-impact-20209417573364_1.jpg" className="w-20 h-30 object-cover"
                   /> {" "}
-                  Genshin Impact
+                  <span className="md:hidden lg:block">Genshin Impact</span>
                 </a>
               </li>
             </ul>
           </div>
+
+        </div>
+        {/*Game Slideshow*/}
+        <div className="mt-10 mb-6 flex items-center justify-between">
+          <h1 className="text-gray-300 text-2xl">Games on Sale</h1>
+          <div className="text-gray-300 text-3xl flex gap-4">
+            <RiArrowLeftCircleLine className="cursor-pointer"/>
+            <RiArrowRightCircleLine className="cursor-pointer"/>
+          </div>
+        </div>
+        {/*Games*/}
+        <div className="grid lg:grid-cols-5">
+          <div className="p-4">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/6d/BioShock_cover.jpg" className="w-full h-80 object-cover rounded-xl mb-2" />
+            <h3 className="text-gray-300 text-lg">Bioshock</h3>
+            <p className="text-gray-500 mb-3">Action Games</p>
+            <div className="flex items-center gap-2">
+              <span className="bg-gradient-to-r from-green-200 to-green-300 p-1 text-green-800 rounded-lg">-75%</span>
+              <span className="text-white">$3.99</span>
+            </div>
+          </div>
+          <div className="p-4">
+            <img src="https://static.wikia.nocookie.net/hitman/images/3/30/HITMAN_3_Box_Art.jpg" className="w-full h-80 object-cover rounded-xl mb-2" />
+            <h3 className="text-gray-300 text-lg">Hitman 3</h3>
+            <p className="text-gray-500 mb-3">Action Games, Shooter</p>
+            <span className="text-white">$19.99</span>
+          </div>
+          <div className="p-4">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/77/Sea_of_thieves_cover_art.jpg" className="w-full h-80 object-cover rounded-xl mb-2" />
+            <h3 className="text-gray-300 text-lg">Sea of Thieves</h3>
+            <p className="text-gray-500 mb-3">Adventures</p>
+            <div className="flex items-center gap-2">
+              <span className="bg-gradient-to-r from-green-200 to-green-300 p-1 text-green-800 rounded-lg">-80%</span>
+              <span className="text-white">$8.99</span>
+            </div>
+          </div>
+          <div className="p-4">
+            <img src="https://cdn1.epicgames.com/epic/offer/RDR2PC1227_Epic%20Games_860x1148-860x1148-b4c2210ee0c3c3b843a8de399bfe7f5c.jpg" className="w-full h-80 object-cover rounded-xl mb-2" />
+            <h3 className="text-gray-300 text-lg">Red Dead Redemption 2</h3>
+            <p className="text-gray-500 mb-3">Action Games, Shooter</p>
+            <span className="text-white">$59.99</span>
+          </div>
+          <div className="p-4">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9d/Cover_Art_of_Doom_Eternal.png" className="w-full h-80 object-cover rounded-xl mb-2" />
+            <h3 className="text-gray-300 text-lg">Doom Eternal</h3>
+            <p className="text-gray-500 mb-3">Shooter</p>
+            <div className="flex items-center gap-2">
+              <span className="bg-gradient-to-r from-green-200 to-green-300 p-1 text-green-800 rounded-lg">-75%</span>
+              <span className="text-white">$9.99</span>
+            </div>
+          </div>
+          
         </div>
       </main>
     </div>
