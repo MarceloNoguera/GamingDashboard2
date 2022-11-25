@@ -86,14 +86,14 @@ function App() {
           </ul>
         </div>
         {/*Btn Menu Movil*/}
-        <button onClick={toggleMenu} className="lg:hidden bg-blue-600 text-white fixed bottom-8 right-6 p-2 text-lg rounded-full z-50">
+        <button onClick={toggleMenu} className="lg:hidden bg-gradient-to-r from-cyan-500 to-blue-500 text-white fixed bottom-8 right-6 p-2 text-lg rounded-full z-50">
             {showMenu ? <RiCloseLine/> :  <RiAlignCenter />}
         </button>
       </sidebar>
       {/*Header*/}
-      <header className="fixed lg:pl-[340px] w-full flex flex-col md:flex-row items-center justify-between gap-4 p-8">
+      <header className="fixed lg:pl-[340px] w-full flex flex-col md:flex-row items-center justify-between gap-4 p-8 bg-[#141414] z-40">
         <nav className="flex items-center gap-4 order-1 lg:order-none">
-          <a className="bg-blue-600 text-white py-2 px-4 rounded-full" href=""
+          <a className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-full" href=""
           >Discover
           </a>
           <a className="text-gray-500 py-2 px-4 rounded-full" href=""
@@ -118,6 +118,65 @@ function App() {
             </li>
           </ul>
       </header>
+      {/*Content*/}
+      <main className="lg:pl-[340px] p-8 pt-36">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-2">
+          <div className="col-span-5 relative">
+            <img src="https://adrenaline.com.br/uploads/chamadas/imagem_2022-09-14_163412548.png" className="w-full h-[500px] object-cover rounded-tl-xl rounded-bl-xl" />
+            <h1 className="absolute top-4 left-4 text-3xl font-bold text-white">Call of Dutty</h1>
+            <div className="absolute left-0 bottom-0 p-8 max-w-2xl">
+              <p className="text-white text-xl">
+                Update
+                </p>
+              <h2 className="text-3xl text-white mb-5 font-bold">
+                In Call of Duty®: Modern Warfare® II, players will be drawn into a conflict on an global scale.</h2>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-xl text-lg gap-2">
+                Play now
+              </button>
+            </div>
+          </div>
+          {/*Games*/}
+          <div className="col-span-1 w-full bg-[#232323] rounded-tr-xl rounded-br-xl">
+            <ul className="p-4 flex flex-col gap-4 h-[500px] overflow-scroll">
+              <li>
+                <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
+                  <img src="https://static-cdn.jtvnw.net/ttv-boxart/33214-285x380.jpg" className="w-20 h-30 object-cover"
+                  /> {" "}
+                  Fornite
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
+                  <img src="https://static-cdn.jtvnw.net/ttv-boxart/30921-272x380.jpg" className="w-20 h-30 object-cover"
+                  /> {" "}
+                  Rocket League
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
+                  <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" className="w-20 h-30 object-cover"
+                  /> {" "}
+                  Minecraft
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
+                  <img src="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/1280/V.jpg" className="w-20 h-30 object-cover"
+                  /> {" "}
+                  Grand Theft Auto V
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center gap-4 text-white text-lg hover:bg-gray-600">
+                  <img src="https://media.vandal.net/m/75962/genshin-impact-20209417573364_1.jpg" className="w-20 h-30 object-cover"
+                  /> {" "}
+                  Genshin Impact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
